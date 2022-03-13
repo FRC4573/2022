@@ -131,11 +131,15 @@ public class Robot extends TimedRobot {
   drive_stick = new Joystick(0);
   control_stick = new Joystick(1);
 
-    UsbCamera camera0 = CameraServer.startAutomaticCapture();
+    UsbCamera camera0 = CameraServer.startAutomaticCapture(0);
    // CameraServer camera = CameraServer.startAutomaticCapture();
     camera0.setResolution(480, 480);
     camera0.setFPS(15);
-
+  
+    UsbCamera camera1 = CameraServer.startAutomaticCapture(1);
+    // CameraServer camera = CameraServer.startAutomaticCapture();
+     camera1.setResolution(360,360);
+     camera1.setFPS(10);
   
   //gyro = new ADXRS450_Gyro(); // Digital Gyro on SPI interface of RoboRIO
   //gyro.calibrate(); // Calibrate Gyro on start
@@ -175,16 +179,17 @@ public class Robot extends TimedRobot {
       shooter.autoShooter();
     }
 
-    while(timer.get() <= 8){
+    while(timer.get() <= 6){
       shooter.setMotorStop5();
       shooter.setMotorStop6();
-      drivetrain.getDriveTrain().arcadeDrive(0.0, 0.55);
+      drivetrain.getDriveTrain().arcadeDrive(-0.55, 0.0);
     }
-    drivetrain.getDriveTrain().arcadeDrive(0.0, 0.0);
+    
    
       while(timer.get() <= 12){
+        drivetrain.getDriveTrain().arcadeDrive(0.0, 0.0);
         shooter.setMotorReverse5();
-        drivetrain.getDriveTrain().arcadeDrive(0.60, 0.0);
+       // drivetrain.getDriveTrain().arcadeDrive(0.60, 0.0);
       }
     }
   /*

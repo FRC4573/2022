@@ -47,19 +47,19 @@ public class Shooter {
         this.motor1.set(1);
     }*/
     public void setMotor2Forward(){
-        this.motor2.set(0.7);
+        this.motor2.set(0.9);
     }
     public void setMotor3Forward(){
-        this.motor3.set(1);
+        this.motor3.set(2);
     }
     public void setMotor4Forward(){
-        this.motor4.set(0.4);
+        this.motor4.set(0.55);
     }
     public void setMotor5Forward(){
         this.motor5.set(1);
     }
     public void setMotor6Forward(){
-        this.motor6.set(1);
+        this.motor6.set(0.75);
     }
 
     //Reverse Functions
@@ -67,19 +67,19 @@ public class Shooter {
         this.motor1.set(-1);
     }*/
     public void setMotorReverse2(){
-        this.motor2.set(-1);
+        this.motor2.set(-0.9);
     }   
     public void setMotorReverse3(){
-        this.motor3.set(-0.7);
+        this.motor3.set(-2);
     }
     public void setMotorReverse4(){
-        this.motor4.set(-0.4);
+        this.motor4.set(-0.55);
     }
     public void setMotorReverse5(){
        this.motor5.set(-1);
     }
     public void setMotorReverse6(){
-        this.motor6.set(-1);
+        this.motor6.set(-0.75);
     }
 
     public void autoShooter(){
